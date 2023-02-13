@@ -26,7 +26,7 @@ makeGreenBtn.addEventListener('click', function makeGreen(){
 
 
 // option: 5 ::::::::::::::::::::::::::::::::
-// We will this. IMPORTANT
+// We will use this. IMPORTANT
 document.getElementById('golden-btn').addEventListener('click', function(){
     document.body.style.backgroundColor = 'goldenrod';
 })
