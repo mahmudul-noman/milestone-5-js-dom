@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS DOM Summary</title>
+</head>
+
+<body>
+    <h1>Final DOM Event Handlers</h1>
+    <h3 id="handler-status">Default Text: Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, magni!</h3>
+
+
+    <p id="input-text-display">Default Input Text</p>
+    <input id="input-field" type="text">
+    <button id="btn-update">Update</button>
+
+
+    <br><br>
+
+    <button onclick="handonClick()">Execute Onclick function</button>
+    <button id="event-listener">Execute Add Event Listener</button>
+
+
+    <!-- JS -->
+    <script>
+        function handonClick() {
+            const handlerStatus = document.getElementById('handler-status');
+            handlerStatus.innerText = 'Onclick(): Lorem ipsum dolor sit amet consect';
+        }
+
+        // Final option
+        document.getElementById('event-listener').addEventListener('click', function () {
+            const handlerStatus = document.getElementById('handler-status');
+            handlerStatus.innerText = 'addEventListener(): Lorem ipsum dolor sit amet consect'
+        })
+
+        // update-btn by final option
+        document.getElementById('btn-update').addEventListener('click', function () {
+            const inputField = document.getElementById('input-field');
+            const inputText = inputField.value;
+
+            const paragraph = document.getElementById('input-text-display');
+            paragraph.innerText = inputText;
+            inputField.value = '';
+        })
+    </script>
+</body>
+
+</html>

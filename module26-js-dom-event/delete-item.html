@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete In JS</title>
+</head>
+
+<body>
+    <h4 id="dlt-item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex eaque dignissimos maxime dolorum porro doloribus rem deleniti iste voluptatibus. A facilis distinctio est, saepe sunt sint nesciunt culpa esse neque soluta eos nisi cumque beatae. Tempore quasi ex, eaque officiis perspiciatis enim id aspernatur aliquid similique, neque quod. Quos, quidem.</h4>
+    <input id="delete-confirm" type="text" placeholder="Type : DELETE">
+    <br>
+    <span>Type <b style="color: tomato;">DELETE</b> for remove Paragraph</span>
+    <br>
+    <button id="dlt-btn" disabled>Delete</button>
+
+
+    <script>
+        // Type Specific word in input box for delete the item
+        document.getElementById('delete-confirm').addEventListener('keyup', function (event) {
+            const text = event.target.value;
+            const deleteBtn = document.getElementById('dlt-btn');
+            if (text === 'DELETE') {
+                deleteBtn.removeAttribute('disabled');
+            }
+            else {
+                deleteBtn.setAttribute('disabled', true);
+            }
+        })
+
+
+        // call btn by addEventListener()
+        document.getElementById('dlt-btn').addEventListener('click', function () {
+            const deleteItem = document.getElementById('dlt-item');
+            deleteItem.style.display = 'none';
+        })
+    </script>
+</body>
+
+</html>
