@@ -1,5 +1,5 @@
 /**
- * myBank Project Step by Step Guide::::::::::::::::::::::::::::::::::::::::::::
+ * myBank Project (deposit) Step by Step Guide::::::::::::::::::::::::::::::::::::::::::::
  * step 1: add event listener to the deposit button
  * step 2: get deposit amount from the deposit input field
  * step 3: clear the deposit input field value

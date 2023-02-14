@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>myBank Dashboard</title>
+
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="styles/style.css" />
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- font-awesome -->
+    <script
+      src="https://kit.fontawesome.com/4dec0133be.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body class="bg-green-100">
+    <header>
+      <h1 class="text-2xl lg:text-5xl text-center mt-6 font-bold">
+        Welcome To Your
+        <span class="font-extrabold text-rose-700">myBank</span> Dashboard !
+      </h1>
+    </header>
+
+    <main>
+      <section class="mt-12">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 w-9/12 mx-auto text-white">
+          <div class="bg-red-500 p-8 rounded-xl">
+            <p class="text-4xl">
+              <i class="fa-solid fa-money-bill-transfer"></i>
+            </p>
+            <h4 class="text-2xl">Deposit</h4>
+            <h2 class="text-4xl">$<span id="deposit-total">00</span></h2>
+          </div>
+          <div class="bg-purple-600 p-8 rounded-xl">
+            <p class="text-4xl">
+              <i class="fa-solid fa-money-bill-trend-up"></i>
+            </p>
+            <h4 class="text-2xl">Withdraw</h4>
+            <h2 class="text-4xl">$<span id="withdraw-total">00</span></h2>
+          </div>
+          <div class="bg-green-600 p-8 rounded-xl">
+            <p class="text-4xl">
+              <i class="fa-solid fa-money-check-dollar"></i>
+            </p>
+            <h4 class="text-2xl">Balance</h4>
+            <h2 class="text-4xl">$<span id="balance-total">00</span></h2>
+          </div>
+        </div>
+      </section>
+
+      <section class="mt-12">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 w-9/12 mx-auto text-white">
+          <div class="bg-cyan-600 p-12 rounded-xl">
+            <p class="text-4xl">
+              <i class="fa-solid fa-money-bill-transfer"></i>
+            </p>
+            <h4 class="text-2xl">Deposit From Your Account !</h4>
+            <input
+              id="deposit-field"
+              type="number"
+              class="outline-0 mb-3 mt-3 p-2 rounded text-black"
+              placeholder="$ You Want to Deposit"
+            />
+            <br/>
+            <button
+              id="btn-deposit"
+              class="bg-purple-600 font-bold hover:bg-purple-800 px-5 py-2 text-white text-xl rounded"
+            >
+              Deposit
+            </button>
+          </div>
+          <div class="bg-teal-600 p-12 rounded-xl">
+            <p class="text-4xl">
+              <i class="fa-solid fa-money-bill-trend-up"></i>
+            </p>
+            <h4 class="text-2xl">Withdraw Your Money !</h4>
+            <input
+              id="withdraw-field"
+              type="number"
+              class="outline-0 mb-3 mt-3 p-2 rounded text-black"
+              placeholder="$ You Want to Withdraw"
+            />
+            <br />
+            <button
+              id="btn-withdraw"
+              class="bg-fuchsia-600 font-bold hover:bg-fuchsia-800 px-5 py-2 text-white text-xl rounded"
+            >
+              Withdraw
+            </button>
+          </div>
+        </div>
+      </section>
+      <p class="text-center mt-12">All Rights Reserved by @ <a class="text-rose-800" href="https://github.com/mahmudul-noman" target="_blank">Mahmudul Hasan</a></p>
+    </main>
+
+    <!-- JS -->
+    <script src="js/utilities.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/deposit.js"></script>
+    <script src="js/withdraw.js"></script>
+  </body>
+</html>
