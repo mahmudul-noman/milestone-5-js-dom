@@ -8,7 +8,7 @@ function getTextElementById(elementId) {
 
 
 // function: 
-function calculateSubTotal(){
+function calculateSubTotal() {
     const currentPhoneTotal = getTextElementById('phone-total');
     const currentCaseTotal = getTextElementById('case-total');
     const currentSubTotal = currentPhoneTotal + currentCaseTotal;
@@ -27,7 +27,7 @@ function calculateSubTotal(){
 
 
 // function
-function setTextElementById(elementId, value){
+function setTextElementById(elementId, value) {
     const textElement = document.getElementById(elementId);
     textElement.innerText = value;
 }
