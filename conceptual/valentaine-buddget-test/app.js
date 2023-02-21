@@ -8,6 +8,7 @@
 //     total();
 //   });
 
+// calculate kitkat chocolate price with quantity
 function handleKitkat() {
   const kitkatCost = multiplePriceWithQuantity("kitkat-quantity", 200);
   setInnerText("chocolate", kitkatCost);
@@ -28,6 +29,8 @@ document.getElementById("diary-buy-btn").addEventListener("click", function () {
   document.getElementById("diary-quantity").value = "";
   total();
 });
+
+
 function total(params) {
   const chocolate = stringToNumberConverter("chocolate");
   const rose = stringToNumberConverter("rose");
@@ -35,6 +38,7 @@ function total(params) {
   const total = chocolate + rose + diary;
   setInnerText("total", total);
 }
+
 // pass the id of the tag this function will convert just innertext to number
 function stringToNumberConverter(id) {
   const element = document.getElementById(id).innerText;
@@ -45,7 +49,7 @@ function setInnerText(id, value) {
   document.getElementById(id).innerText = value;
 }
 
-// this fucntion will calculate the quatity and price of gift this fucntion will take two parameter inutField id & price of gift
+// this function will calculate the quantity and price of gift this fucntion will take two parameter inutField id & price of gift
 function multiplePriceWithQuantity(id, price) {
   const quantity = document.getElementById(id).value;
   const totalPrice = parseInt(quantity) * parseInt(price);
